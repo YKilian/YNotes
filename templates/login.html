@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+</head>
+<body>
+<div id="main-box">
+    <form action="/login" method="post" id="data-form">
+        {% if message %}
+        <p style="color: var(--errorColor);">{{ message }}</p>
+        {% endif %}
+        <label class="label-input" for="username">Username:</label><br>
+        <input class="text-input" type="text" id="username" name="username" value="{{username}}"><br>
+        <label class="label-input" for="password">Password:</label><br>
+        <input class="text-input" type="password" id="password" name="password"><br><br>
+        <input class="submit-data" type="submit" value="Login">
+    </form>
+</div>
+<div id="head-bar">
+    <label id="title-label">YNOTES</label>
+    <a href="/createAccount">
+        <button id="jump-button">Don't have an account yet?</button>
+    </a>
+</div>
+</body>
+</html>

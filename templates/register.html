@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+
+</head>
+<body>
+<div id="main-box">
+    <form action="/register" method="post" id="data-form">
+
+        <label class="label-input" for="name">Your name:</label><br>
+        <input class="text-input" type="text" id="name" name="name"><br>
+        <label class="label-input" for="username">Username:</label><br>
+        <input class="text-input" type="text" id="username" name="username"><br>
+        <label class="label-input" for="email">Email:</label><br>
+        <input class="text-input" type="email" id="email" name="email"><br>
+        <label class="label-input" for="password">Password:</label><br>
+        <input class="text-input" type="password" id="password" name="password"><br><br>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <input class="submit-data" type="submit" value="Register">
+    </form>
+</div>
+<div id="head-bar">
+    <label id="title-label">YNOTES</label>
+    <a href="/">
+        <button id="jump-button">Already have an account?</button>
+    </a>
+</div>
+</body>
+</html>

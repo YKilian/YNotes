@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{username}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/note_overview.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/note_editor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/headbar.css') }}">
+</head>
+<body>
+<div id="app">
+    <div id="head-bar">
+        <label id="title-label">YNOTES</label>
+        <div id="note-tools">
+            <div>
+                <p title="Save" onclick="savePage()"><img src="{{ url_for('static', filename='svg/save.svg') }}"></p>
+                <p title="Download" onclick="download_doc_current()"><img src="{{ url_for('static', filename='svg/download.svg') }}"></p>
+                <p title="Delete" onclick="delete_doc_current()"><img src="{{ url_for('static', filename='svg/delete.svg') }}"></p>
+            </div>
+        </div>
+        <a href="/logout">
+            <button id="jump-button">Logout</button>
+        </a>
+    </div>
+    <div id="main-body">
+        <div id="note-sidebar">
+            <div id="note-search"></div>
+            <div id="note-new"></div>
+            <div id="note-overview"></div>
+            <div id="toggle-sidebar"></div>
+        </div>
+        <div id="note-editor"></div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='displayElements.js') }}"></script>
+<script>
+    list_Notes({{ file | tojson }});
+    show_editor();
+</script>
+</body>
+</html>

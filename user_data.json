@@ -1,0 +1,15 @@
+{
+  "sysInfo": {
+    "number_users": 1
+  },
+  "New_User": {
+    "id": "0x00000000",
+    "password": "$2b$12$AfU7DXSn80omd1xolQLBru370PpJv22R9A5Pf5WPgfDZFuTkbcKqi",
+    "name": "First Account",
+    "email": "example@user.com",
+    "role": "user",
+    "status": "active",
+    "created_at": "2024-05-20 17:02:23.209155",
+    "updated_at": "2024-05-20 17:02:23.209155"
+  }
+}

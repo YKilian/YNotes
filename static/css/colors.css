@@ -1,0 +1,12 @@
+:root {
+    --black: #030303;
+    --glass: rgba(3, 3, 3, 0.3);
+    --bgColor: #f1f1f1;
+    --listEvenColor: #f1f1f1;
+    --listOddColor: #e1e1e1;
+    --primaryColor: #0C2D57;
+    --secondaryColor: #FC6736;
+    --tertiaryColor: #FFB0B0;
+    --quaternaryColor: #ECECEC;
+    --errorColor: #ea0c0c;
+}
